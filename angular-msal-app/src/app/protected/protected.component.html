@@ -1,0 +1,7 @@
+<div >
+    <p *ngIf="isAuthorized; else noAccess"><strong>Protected Data: </strong> {{result?.data}}</p>
+    <ng-template #noAccess>
+        <p><strong>You don't have access to secret data.</strong></p>
+    </ng-template>
+</div>
+

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "To91vt/Ag4I7pcO+u7RG5Ul/AXGWxS/EXSr7R72rOUA=",
+  "Source": "msal-api",
+  "BasePath": "_content/msal-api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
