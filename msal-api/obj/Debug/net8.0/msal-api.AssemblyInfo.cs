@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("msal-api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4b1a54d1e6113cfeeac92a80ad5ee21336d0ef56")]
 [assembly: System.Reflection.AssemblyProductAttribute("msal-api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("msal-api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

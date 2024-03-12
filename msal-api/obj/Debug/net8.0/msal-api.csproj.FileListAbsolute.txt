@@ -110,3 +110,4 @@
 /home/vizamora/repos/msal-poc/msal-api/obj/Debug/net8.0/msal-api.pdb
 /home/vizamora/repos/msal-poc/msal-api/obj/Debug/net8.0/msal-api.genruntimeconfig.cache
 /home/vizamora/repos/msal-poc/msal-api/obj/Debug/net8.0/ref/msal-api.dll
+/home/vizamora/repos/msal-poc/msal-api/obj/Debug/net8.0/msal-api.sourcelink.json

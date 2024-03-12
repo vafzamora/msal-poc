@@ -21,7 +21,8 @@ export class ProfileComponent implements OnInit {
   profile!: ProfileType;
 
   constructor(
-    private http: HttpClient, private msalService: MsalService
+    private http: HttpClient, 
+    private msalService: MsalService
   ) { }
 
   ngOnInit() {

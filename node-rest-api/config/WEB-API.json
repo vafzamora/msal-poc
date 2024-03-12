@@ -1,0 +1,10 @@
+{
+    "authOptions": {
+        "audience": "api://<Client Id>",
+        "authority": "https://sts.windows.net/<Tenant Id>/",
+        "clientSecret": "<ENTER_CLIENT_SECRET>"
+    },
+    "serverPort": 5224,
+    "webApiScope": "api-access",
+    "discoveryKeysEndpoint": "https://login.microsoftonline.com/<Tenant Id>/discovery/v2.0/keys"
+}
