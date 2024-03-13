@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "lJdYn0fmTQm/qBsttP9MHmAWtajE/crRk51JGkb1mWFAcZTjqMB5hRrf56mxVUyKk4Qh9GAa962otKr6XNRziA==",
+  "dgSpecHash": "InjtHxc+E2QQx2ykolM3UcVP2kKMO1AYdHWKESIuwJEAJF1TBHwp2+TPRcbxrSHSJoTkZJU04Q2RQ2Lmu8MnPQ==",
   "success": true,
   "projectFilePath": "/home/vizamora/repos/msal-poc/msal-api/msal-api.csproj",
   "expectedPackageFiles": [

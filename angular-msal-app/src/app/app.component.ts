@@ -10,10 +10,12 @@ import { filter, takeUntil } from 'rxjs/operators';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit, OnDestroy {
-  title = 'msal-angular-tutorial';
+  title = 'Contoso Bank';
   isIframe = false;
   loginDisplay = false;
   private readonly _destroying$ = new Subject<void>();
+
+  isAdmin = this.checkAdminRole()
 
   constructor(@Inject(MSAL_GUARD_CONFIG) private msalGuardConfig, private broadcastService: MsalBroadcastService, private authService: MsalService) { }
 
@@ -51,6 +53,11 @@ export class AppComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     this._destroying$.next(undefined);
     this._destroying$.complete();
+  }
+
+  checkAdminRole(): boolean{
+    var accounts = this.authService.instance.getAllAccounts();
+    return accounts.length>0 && accounts[0].idTokenClaims.roles.includes("admin");
   }
 }
 

@@ -21,11 +21,14 @@ const validateJwt = (req, res, next) => {
         };
         
         jwt.verify(token, getSigningKeys, validationOptions, (err, payload) => {
-            req.decoded = payload; 
             if (err) {
                 console.log(err);
                 return res.sendStatus(403);
             }
+            if (!payload?.scp?.split(" ").includes(webApiConfig.webApiScope)) {
+                res.sendStatus(403);
+            }
+            req.roles = payload?.roles; 
             next();
         });
     } else {
@@ -35,13 +38,12 @@ const validateJwt = (req, res, next) => {
 
 const requireRole = (requiredRole) => (req, res, next)=>{
     if( requiredRole != "" 
-            && req.decoded != undefined 
-            && req.decoded.roles.findIndex(role=>role==requiredRole)>=0 ){
+            && req.roles != undefined 
+            && req.roles.findIndex(role=>role==requiredRole)>=0 ){
         next();
     }else{
         res.sendStatus(403);
     } 
-
 }
 
 const getSigningKeys = (header, callback) => {
@@ -56,9 +58,11 @@ const getSigningKeys = (header, callback) => {
 }
 
 const app = express();
-app.use(cors(corsOptions));
-app.use(validateJwt);
-app.use(express.json());
+app.use(
+    cors(corsOptions),
+    validateJwt,
+    express.json()
+);
 
 const PORT = process.env.PORT || webApiConfig.serverPort;
 
