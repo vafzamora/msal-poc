@@ -68,7 +68,7 @@ const isIE =
         interactionType: InteractionType.Redirect,
         protectedResourceMap: new Map([
           ["https://graph.microsoft.com/v1.0/me", ["user.read"]],
-          ["http://localhost:5224/*",["api://592392bd-7ce7-49a2-8758-794f6de1d3e5/api-access"]],
+          ["http://localhost:5224/*",["api://<API Client Id>/api-access"]],
         ])
       }
     )
